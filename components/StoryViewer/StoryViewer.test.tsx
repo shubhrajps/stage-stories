@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import StoryViewer from './StoryViewer';
 import { StoryContext } from '../Context/StoryContext';
 import { UserStory } from '@/assets/stories';

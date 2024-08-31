@@ -13,7 +13,7 @@ const UserCircleList: React.FC = () => {
   return (
     <div className="flex overflow-x-auto mx-4 py-8 snap-x snap-mandatory">
       {allUserStories.map((user: UserStory) => (
-        <div key={user.userId} className="flex-shrink-0 snap-center">
+        <div data-testid="user-circle" key={user.userId} className="flex-shrink-0 snap-center">
           <UserCircle user={user} onClick={onUserSelect} />
         </div>
       ))}
