@@ -26,7 +26,7 @@ export default function UserStories() {
           <>
             {selectedUser === null ? (
               <>
-                <p className='font-bold text-3xl text-red-400 mt-6 ml-6'>STAGE</p>
+                <p data-testId="title" className='font-bold text-3xl text-red-400 mt-6 ml-6'>STAGE</p>
                 <UserCircleList />
               </>
             ) : (
