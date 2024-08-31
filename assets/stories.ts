@@ -73,4 +73,19 @@ export const allStories : UserStory[] = [
       preloadResource: true,
     }]
   },
+  {
+    userId: "Toronto Pil",
+    stories: [{
+      url: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      preloadResource: true,
+    },
+    {
+      url: "https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=2572&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      preloadResource: true,
+    },
+    {
+      url: "https://plus.unsplash.com/premium_photo-1664361480872-6416aab14696?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      preloadResource: true,
+    }]
+  },
 ];

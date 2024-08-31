@@ -1,22 +1,18 @@
-// app/UserCircleList.tsx
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import useSWR from 'swr';
+import React, { useContext } from 'react';
 import UserCircle from './UserCircle';
 import { UserStory } from '@/assets/stories';
+import { StoryContext } from './StoryContext';
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const UserCircleList: React.FC = () => {
+  const { setSelectedUser, allUserStories } = useContext(StoryContext);
 
-const UserCircleList: React.FC<{ onUserSelect: (userId: string) => void }> = ({ onUserSelect }) => {
-  const { data: userStories, error } = useSWR('/api/fetchAllStories', fetcher);
-
-  if (error) return <div>Failed to load users</div>;
-  if (!userStories) return <div>Loading...</div>;
+  const onUserSelect = (user: UserStory) => setSelectedUser(user);
 
   return (
     <div className="flex overflow-x-auto mx-4 py-8 snap-x snap-mandatory">
-      {userStories.map((user: UserStory) => (
+      {allUserStories.map((user: UserStory) => (
         <div key={user.userId} className="flex-shrink-0 snap-center">
           <UserCircle user={user} onClick={onUserSelect} />
         </div>

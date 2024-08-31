@@ -1,9 +1,9 @@
-import UserStories from '../components/UserStories';
+import StageStories from '@/components/StageStories';
 
 export default function Home() {
   return (
-    <main>
-       <UserStories />
-    </main>
+      <main>
+        <StageStories />
+      </main>
   );
 }

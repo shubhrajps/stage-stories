@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import StoryHeader from './StoryHeader';
 import Stories from 'react-insta-stories';
 import { Story } from '@/assets/stories';
+import { StoryContext } from './StoryContext';
 
-const StoryViewer: React.FC<{selectedUserId: string, selectedUserStories: Story[], closeViewer: Function}> = ({ selectedUserId, selectedUserStories, closeViewer }) => {
+const StoryViewer: React.FC = () => {
+
+  const { selectedUser, setSelectedUser } = useContext(StoryContext);
+
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-black flex flex-col z-50">
       <div className="absolute top-8 left-4 right-4 flex justify-between items-center text-white shadow-md z-10">
-        <StoryHeader userId={selectedUserId||''} onClose={closeViewer}/>
+        <StoryHeader />
       </div>
       <div className="flex-1 z-0">
         <Stories
-          stories={selectedUserStories}
+          stories={selectedUser?.stories}
           defaultInterval={5000}
           width="100%"
           height="100%"
