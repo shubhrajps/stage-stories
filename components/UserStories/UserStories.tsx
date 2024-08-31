@@ -1,8 +1,8 @@
 "use client"
 import { useContext, useEffect, useState } from 'react';
-import UserCircleList from './UserCircleList';
-import StoryViewer from './StoryViewer';
-import { StoryContext } from './StoryContext';
+import UserCircleList from '../UsersList/UserCircleList';
+import StoryViewer from '../StoryViewer/StoryViewer';
+import { StoryContext } from '../Context/StoryContext';
 
 export default function UserStories() {
   const { selectedUser } = useContext(StoryContext);

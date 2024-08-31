@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 import UserCircle from './UserCircle';
 import { UserStory } from '@/assets/stories';
-import { StoryContext } from './StoryContext';
+import { StoryContext } from '../Context/StoryContext';
 
 const UserCircleList: React.FC = () => {
   const { setSelectedUser, allUserStories } = useContext(StoryContext);

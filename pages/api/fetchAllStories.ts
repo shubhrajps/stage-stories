@@ -1,5 +1,3 @@
-// import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { allStories, UserStory } from "@/assets/stories";
 import { NextApiRequest, NextApiResponse } from "next";
 

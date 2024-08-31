@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import StoryHeader from './StoryHeader';
 import Stories from 'react-insta-stories';
 import { motion } from 'framer-motion';
-import { StoryContext } from './StoryContext';
+import { StoryContext } from '../Context/StoryContext';
 
 const StoryViewer: React.FC = () => {
 
@@ -28,7 +28,7 @@ const StoryViewer: React.FC = () => {
         <div className="absolute top-8 left-4 right-4 flex justify-between items-center text-white shadow-md z-10">
           <StoryHeader />
         </div>
-        <div className="flex-1 z-0">
+        <div data-testid="stories" className="flex-1 z-0">
           <Stories
             stories={selectedUser?.stories}
             defaultInterval={5000}
