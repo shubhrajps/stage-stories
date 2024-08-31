@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { UserStory } from "@/assets/stories";
+import { motion } from 'framer-motion';
 
 interface UserCircleProps {
   user: UserStory;
@@ -9,7 +10,12 @@ interface UserCircleProps {
 
 const UserCircle: React.FC<UserCircleProps> = ({ user, onClick }) => {
   return (
-    <div onClick={() => onClick(user)}>
+    <motion.div
+      onClick={() => onClick(user)}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="flex-shrink-0 snap-center"
+    >
       <Image 
         alt={user?.userId} 
         src={user?.stories[0].url} 
@@ -17,7 +23,7 @@ const UserCircle: React.FC<UserCircleProps> = ({ user, onClick }) => {
         height={60} 
         className='border border-black h-[80px] w-[80px] rounded-full mx-2' 
       />
-    </div>
+    </motion.div>
   );
 };
 
