@@ -15,9 +15,11 @@ const UserCircleList: React.FC<{ onUserSelect: (userId: string) => void }> = ({ 
   if (!userStories) return <div>Loading...</div>;
 
   return (
-    <div className="user-circles" style={{ display: 'flex', overflowX: 'auto', padding: '10px', backgroundColor: '#f0f0f0' }}>
+    <div className="flex overflow-x-auto mx-4 py-8 snap-x snap-mandatory">
       {userStories.map((user: UserStory) => (
-        <UserCircle key={user.userId} user={user} onClick={onUserSelect} />
+        <div key={user.userId} className="flex-shrink-0 snap-center">
+          <UserCircle user={user} onClick={onUserSelect} />
+        </div>
       ))}
     </div>
   );

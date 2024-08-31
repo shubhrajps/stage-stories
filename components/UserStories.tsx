@@ -1,9 +1,9 @@
 "use client"
-import { Story, UserStory } from '@/assets/stories';
+import { UserStory } from '@/assets/stories';
 import { useEffect, useState } from 'react';
-import Stories from 'react-insta-stories';
 import useSWR from 'swr';
 import UserCircleList from './UserCircleList';
+import StoryViewer from './StoryViewer';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -38,25 +38,17 @@ export default function UserStories() {
       : [];
 
   return (
-    <div className="stories-container">
+    <>
       {isMobile ? 
-      <>
-        <UserCircleList onUserSelect={handleUserClick} />
-        {selectedUserStories.length > 0 && 
-          <Stories
-            stories={selectedUserStories}
-            defaultInterval={5000}
-            width={375}
-            height={667}
-            loop={false}
-            keyboardNavigation={true}
-            onStoryStart={(story: Story) => console.log('Story started', story)}
-            onStoryEnd={(story: Story, storyIndex: Number) =>
-              console.log('Story ended', story, storyIndex)
-            }
-            onAllStoriesEnd={() => console.log('All stories ended')}
-          />}
-      </> : <p className='text-xl'>Stories are not available on desktop</p>}
-    </div>
+        <>
+          {selectedUserId===null?<>
+            <p className='font-bold text-3xl text-red-400 mt-6 ml-6'>STAGE</p>
+            <UserCircleList onUserSelect={handleUserClick} />
+          </>:
+          <>
+            {selectedUserStories.length > 0 && <StoryViewer selectedUserId={selectedUserId||''} selectedUserStories={selectedUserStories} closeViewer={()=>setSelectedUserId(null)} />}
+          </>}
+        </> : <p className='text-xl'>Stories are not available on desktop</p>}
+    </>
   );
 }

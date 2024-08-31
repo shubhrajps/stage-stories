@@ -10,21 +10,15 @@ interface UserCircleProps {
 const UserCircle: React.FC<UserCircleProps> = ({ user, onClick }) => {
   return (
     <div
-      className="user-circle"
       onClick={() => onClick(user.userId)}
-      style={{
-        width: '60px',
-        height: '60px',
-        borderRadius: '50%',
-        backgroundColor: '#ccc',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '0 10px',
-        cursor: 'pointer',
-      }}
     >
-      <Image alt={user?.userId} src={user?.stories[0].url} width={300} height={300} />
+      <Image 
+        alt={user?.userId} 
+        src={user?.stories[0].url} 
+        width={60} 
+        height={60} 
+        className='border border-black h-[80px] w-[80px] rounded-full mx-2' 
+        />
     </div>
   );
 };
