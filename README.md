@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Stage Stories
+
+Stage Stories is a Next.js application that allows users to view stories shared by other users. It features a user-friendly interface for browsing and viewing stories.
+
+## Features
+
+- Display a list of users with their profile pictures
+- Allow users to select a user to view their stories
+- Provide a full-screen story viewer with navigation controls
+- Support for both mobile and desktop views
+- Responsive design that adapts to different screen sizes
+- API route for fetching all user stories
+- Unit tests for components using Jest and React Testing Library
+- CI/CD pipeline for automated testing and deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/stage-stories.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd stage-stories
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Install the dependencies
+```bash
+npm install
+```
 
-## Learn More
+4. Run the development server
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Run the tests
+```bash
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Assumptions
+1. **Availability of Stories:** 
+The project assumes that the stories will be available and accessible from the API endpoint without any downtime. It is expected that the data source for stories will remain stable and that there will be no significant changes to the API structure.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Performance Expectations:**
+The project assumes that users will have a reliable internet connection when accessing the application. The performance of the story loading and transitions is optimized for average network conditions, but users on slower connections may experience delays.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built With
+- **Next.js** - React framework for building server-rendered applications
+- **React** - JavaScript library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **Framer Motion** - Animation library for React
+- **react-insta-stories** - Library for creating Instagram-like stories
+- **Jest** - JavaScript testing framework
+- **React Testing Library** - Library for testing React components
