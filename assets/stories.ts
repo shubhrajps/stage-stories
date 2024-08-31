@@ -1,6 +1,6 @@
 export type Story = {
     url: string;
-    type?: number;
+    type?: string;
     preloadResource?: boolean;
 };
 
