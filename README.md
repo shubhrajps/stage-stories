@@ -2,6 +2,9 @@
 
 Stage Stories is a Next.js application that allows users to view stories shared by other users. It features a user-friendly interface for browsing and viewing stories.
 
+### LIVE DEMO
+Deployed at https://stage-stories.vercel.app/
+
 ## Features
 
 - Display a list of users with their profile pictures
@@ -59,7 +62,6 @@ npm test
 
 ### Live Video
 https://github.com/user-attachments/assets/f577bbdf-6ceb-4b80-b148-ab196ab14043
-
 
 ### Assumptions
 1. **Availability of Stories:** 
