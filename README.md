@@ -49,6 +49,18 @@ npm run dev
 npm test
 ```
 
+## Screenshots & Videos
+
+### Homescreen
+<img width="376" alt="Screenshot 2024-09-01 at 12 29 55 AM" src="https://github.com/user-attachments/assets/ebf51203-823f-4160-b3e9-de7c3528e116">
+
+### StoriesView
+<img width="379" alt="Screenshot 2024-09-01 at 12 30 01 AM" src="https://github.com/user-attachments/assets/dfe54ada-e315-44ae-b840-6191b45b5d41">
+
+### Live Video
+https://github.com/user-attachments/assets/f577bbdf-6ceb-4b80-b148-ab196ab14043
+
+
 ### Assumptions
 1. **Availability of Stories:** 
 The project assumes that the stories will be available and accessible from the API endpoint without any downtime. It is expected that the data source for stories will remain stable and that there will be no significant changes to the API structure.
